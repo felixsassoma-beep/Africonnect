@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel do Criador - Africonnect</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h2>Painel do Criador</h2>
+<a href="feed.html">⬅ Voltar</a>
+</header>
+
+<div class="learn-box">
+
+<h3>Status de Monetização</h3>
+<p>Seguidores: <span id="followers">0</span> / 10.000</p>
+<p>Vídeos válidos (+1 min): <span id="videos">0</span> / 20</p>
+<p>Visualizações monetizadas: <span id="views">0</span></p>
+
+<hr>
+
+<h3>Ganhos com Vídeos</h3>
+<p>Estimativa em USD: <span id="videoMoney">0.00</span></p>
+
+<hr>
+
+<h3>Pontos por Ensino de Línguas</h3>
+<p>Pontos acumulados: <span id="points">0</span></p>
+<p>Equivalente em USD: <span id="pointsMoney">0.00</span></p>
+<p>Mínimo para levantamento: 3.000 pontos</p>
+
+<hr>
+
+<h3>Elegibilidade</h3>
+<p id="eligible" style="color:red;">Ainda não elegível</p>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+let followers = 1250;
+let videos = 6;
+let views = 42000;
+let points = 240;
+
+document.getElementById("followers").innerText = followers;
+document.getElementById("videos").innerText = videos;
+document.getElementById("views").innerText = views;
+
+let money = (views/10000)*2.5;
+document.getElementById("videoMoney").innerText = money.toFixed(2);
+
+let pointsMoney = (points/100)*1.5;
+document.getElementById("points").innerText = points;
+document.getElementById("pointsMoney").innerText = pointsMoney.toFixed(2);
+
+if(followers>=10000 && videos>=20){
+document.getElementById("eligible").innerText="Conta aprovada para monetização";
+document.getElementById("eligible").style.color="green";
+}
+</script>
+
+</body>
+</html>
