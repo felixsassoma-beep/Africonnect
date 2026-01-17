@@ -1,0 +1,45 @@
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#fff7f0;
+}
+
+header{
+background:#ff6f3c;
+color:white;
+padding:15px;
+display:flex;
+justify-content:space-between;
+}
+
+.market{
+display:flex;
+gap:20px;
+padding:20px;
+flex-wrap:wrap;
+}
+
+.item{
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 0 5px rgba(0,0,0,0.2);
+text-align:center;
+width:150px;
+}
+
+.learn-box{
+max-width:400px;
+margin:40px auto;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 8px rgba(0,0,0,0.2);
+text-align:center;
+}
+
+.learn-box input{
+width:90%;
+padding:10px;
+margin:5px;
+}
